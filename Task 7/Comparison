@@ -1,0 +1,19 @@
+Proposed redesign :
+
+The redesigned playlist system uses two collections:
+1. ArrayList: Stores the main playlist and supports accessing songs using indexes.
+2. ArrayDeque: Manages the Up Next queue, allowing songs to be added at either end and removed from the front.
+
+Performance comparison : 
+Operation	                Original ArrayList	        Redesigned ArrayDeque
+Add at end	                O(1) amortized	            O(1) amortized
+Add at beginning	        O(n)	                    O(1) amortized
+Remove at beginning	        O(n)	                    O(1) amortized
+Access by index	            O(1)	                    Not supported
+Iteration	                O(n)	                    O(n)
+
+Analysis and discussion :
+
+The original implementation uses ArrayList for all playlist operations. When a new song is inserted or removed from the beginning, the remaining elements must be shifted. This increases the execution time as the playlist grows.
+The redesigned implementation uses ArrayDeque for front and rear operations. It avoids shifting all existing elements and provides efficient queue operations.
+
