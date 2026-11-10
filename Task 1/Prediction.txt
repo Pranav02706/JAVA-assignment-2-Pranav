@@ -1,0 +1,24 @@
+1. Prediction before implementation
+Java provides three approaches for building strings.
+
+String
+- String objects are immutable.
+- Once created, their contents cannot be modified.
+- Every concatenation using + creates a new String object.
+- Repeated concatenation inside loops creates unnecessary objects and increases memory usage.
+StringBuilder
+- StringBuilder is mutable.
+- It modifies the existing character sequence instead of creating a new String for every append.
+- It is faster for repeated string concatenation.
+- It is not synchronized, so it is not thread-safe.
+StringBuffer
+- StringBuffer is also mutable.
+- Its methods are synchronized.
+- It is thread-safe when multiple threads access the same instance.
+- Synchronization introduces some additional overhead compared with StringBuilder.
+2. Workload design
+Three workloads can be used to compare the approaches.
+Workload	Number of tickets	Fields per ticket
+Workload 1	    1	                    5
+Workload 2	  10,000	                50
+Workload 3	  50,000	                100
