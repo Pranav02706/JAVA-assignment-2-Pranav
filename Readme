@@ -1,0 +1,64 @@
+Name : Pranav S
+Reg No. : 192472063
+
+2. Steps to compile and run each program
+Step 1: Create a project folder
+
+Create a folder named Assignment2 and open it in VS Code.
+
+Step 2: Create Java files
+
+Create the following seven files inside the folder:
+Assignment2/
+│
+├── Q1_StringComparison.java
+├── Q2_ListComparison.java
+├── Q3_StudentHashSet.java
+├── Q4_PharmacyInventory.java
+├── Q5_LeaderboardDemo.java
+├── Q6_Triage.java
+└── Q7_Redesign.java
+
+
+Step 3: Add the source code
+Enter Java program into each file. Ensure that the public class name matches the filename.
+
+Step 4: Open the terminal
+In VS Code
+
+Step 5: Compile and run
+
+Use the following command for each program.
+Compilation command	
+javac <file_name>
+Execution command
+java <file_name>
+
+3. Short result notes for each task
+T1 – String, StringBuilder and StringBuffer Comparison
+The program compares the execution time of String, StringBuilder and StringBuffer using System.nanoTime(). The experiment demonstrates that StringBuilder is generally more efficient for repeated string modifications because it avoids creating many intermediate String objects. StringBuffer provides synchronized operations.
+Result: The experiment identifies StringBuilder as a suitable choice for efficient string concatenation in single-threaded applications.
+
+T2 – ArrayList, LinkedList and ArrayDeque Comparison
+The program performs insertion, deletion and element-access operations using three Java collection classes. It demonstrates their different performance characteristics.
+Result: ArrayList provides efficient indexed access, LinkedList supports efficient operations at both ends, and ArrayDeque is suitable for queue-based operations.
+
+T3 – Student HashSet Using equals() and hashCode()
+The program stores student records in a HashSet and identifies duplicate students using their registration numbers. The equals() and hashCode() methods ensure that logically identical student records are treated as duplicates.
+Result: Duplicate student records are eliminated, and only unique registration numbers are maintained in the HashSet.
+
+T4 – Pharmacy Inventory Using Map Implementations
+The program compares HashMap, TreeMap and LinkedHashMap for storing and retrieving pharmacy inventory records. It demonstrates the differences in ordering and lookup performance.
+Result: HashMap provides efficient average lookup, TreeMap maintains sorted key order, and LinkedHashMap preserves insertion order.
+
+T5 – Generic Leaderboard Using Comparator
+The program implements a generic leaderboard that sorts teams based on points, goal difference and team name. It uses Java Generics and Comparator to perform flexible sorting.
+Result: The leaderboard correctly displays teams in descending order of points, followed by goal difference, with alphabetical ordering for remaining ties.
+
+T6 – Hospital Patient Triage Using PriorityQueue
+The program uses PriorityQueue to arrange patients according to their severity levels. Patients with higher priority (lower severity number) are processed first. Patients with equal severity are processed according to their arrival order.
+Result: The priority queue ensures that critical patients are processed before less critical patients while maintaining FIFO order for equal severity levels.
+
+T7 – Playlist Redesign Using ArrayList and ArrayDeque
+The program compares playlist operations using ArrayList and ArrayDeque. It measures the execution time of adding and removing songs at different positions.
+Result: ArrayDeque performs front insertion and removal more efficiently than ArrayList, making it suitable for queue-based playlist operations.
