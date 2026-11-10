@@ -1,0 +1,17 @@
+Explanation :
+
+- Generics: Leaderboard<T> allows the leaderboard to work with different object types.
+- Comparator: Defines the ranking order of teams.
+- comparingInt(): Compares integer values such as points.
+- reversed(): Arranges points and goal difference in descending order.
+- thenComparing(): Applies the next condition when two teams have equal points or goal difference.
+- Alphabetical ordering: Team names are compared when both numerical values are equal.
+- Wildcard (List<? extends T>): Allows the constructor to accept a list containing objects of type T or its subclasses.
+
+Time complexity :
+
+Operation	Complexity
+Adding teams	O(1) average
+Sorting teams	O(n log n)
+Displaying teams	O(n)
+Copying input list	O(n)
