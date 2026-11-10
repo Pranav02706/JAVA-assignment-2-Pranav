@@ -1,0 +1,16 @@
+Explanation :
+
+- PriorityQueue stores patients according to their priority.
+- Severity 1 represents critical patients and severity 5 represents minor patients.
+- Lower severity numbers are treated first.
+- The arrival variable maintains the order in which patients arrive.
+- If two patients have equal severity, the earlier arrival is treated first.
+- poll() removes and returns the highest-priority patient.
+
+Time complexity :
+
+Operation	                        Time complexity
+Add patient	                            O(log n)
+Remove patient	                        O(log n)
+View highest-priority patient	        O(1)
+Process all patients	                O(n log n)
