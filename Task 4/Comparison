@@ -1,0 +1,23 @@
+Comparison of Map implementations
+
+HashMap
+- Stores key-value pairs.
+- Does not guarantee insertion or sorted order.
+- Provides O(1) average insertion and lookup.
+- Suitable for fast medicine stock lookup.
+TreeMap
+- Stores keys in sorted order.
+- Uses a Red-Black tree internally.
+- Insertion and lookup take O(log n).
+- Suitable for generating reports in medicine-code order.
+LinkedHashMap
+- Maintains insertion order by default.
+- Provides O(1) average insertion and lookup.
+- Suitable for generating reports in the order medicines were added.
+
+Feature	            HashMap	                TreeMap	            LinkedHashMap
+Storage order	    No guaranteed order	    Sorted by key	    Insertion order
+Search	Average     O(1)	                O(log n)	        Average O(1)
+Insertion Average   O(1)	                O(log n)	        Average O(1)
+Report generation	O(n)	                O(n)	            O(n)
+Best use	        Fast lookup	            Sorted reports	    Insertion-order reports
