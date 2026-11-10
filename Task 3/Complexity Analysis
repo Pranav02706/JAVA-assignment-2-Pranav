@@ -1,0 +1,14 @@
+Explanation :
+
+- equals() compares two students using their registration numbers.
+- hashCode() generates a hash value using the registration number.
+- HashSet uses hashCode() to locate a bucket and equals() to check whether an equivalent object already exists.
+- Duplicate registration numbers are not stored as separate entries.
+
+Time Complexity : 
+
+Operation	        Average complexity
+Add student	            O(1)
+Search student	        O(1)
+Remove student	        O(1)
+Iterate students	    O(n)
